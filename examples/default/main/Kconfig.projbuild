@@ -15,5 +15,5 @@ menu "Example configuration"
                 Choose this when the chip is either SHT2x or HTU21D.
     endchoice
 
-    rsource "../../../../devtools/Kconfig.i2c"
+    rsource "../../../Kconfig.i2c"
 endmenu
