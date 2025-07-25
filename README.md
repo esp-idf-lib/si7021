@@ -11,7 +11,7 @@ Driver for Si7013/Si7020/Si7021/HTU2xD/SHT2x and compatible temperature and humi
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/si7021^1.0.1
+idf.py add-dependency esp-idf-lib/si7021^1.0.1
 ```
 
 ## Support
