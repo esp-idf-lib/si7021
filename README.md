@@ -1,5 +1,9 @@
 # esp-idf-lib/si7021
 
+[![Build examples](https://github.com/esp-idf-lib/si7021/actions/workflows//build.yml/badge.svg)](https://github.com/esp-idf-lib/si7021/actions/workflows//build.yml)
+[![Build docs](https://github.com/esp-idf-lib/si7021/actions/workflows//build-docs.yml/badge.svg)](https://github.com/esp-idf-lib/si7021/actions/workflows//build-docs.yml)
+[![Validation](https://github.com/esp-idf-lib/si7021/actions/workflows//validate-component.yml/badge.svg)](https://github.com/esp-idf-lib/si7021/actions/workflows//validate-component.yml)
+
 Driver for Si7013/Si7020/Si7021/HTU2xD/SHT2x and compatible temperature and humidity sensors.
 
 * [Documentation](https://esp-idf-lib.github.io/si7021/)
@@ -11,7 +15,7 @@ Driver for Si7013/Si7020/Si7021/HTU2xD/SHT2x and compatible temperature and humi
 ## Installation
 
 ```sh
-idf.py add-dependency esp-idf-lib/si7021^1.0.1
+idf.py add-dependency esp-idf-lib/si7021
 ```
 
 ## Support
