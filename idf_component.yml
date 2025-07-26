@@ -1,5 +1,5 @@
 ---
-version: 1.0.1
+version: 1.0.2
 description: Driver for Si7013/Si7020/Si7021/HTU2xD/SHT2x and compatible temperature and humidity sensors
 license: BSD-3
 targets:
