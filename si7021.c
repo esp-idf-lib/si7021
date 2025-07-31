@@ -273,15 +273,15 @@ esp_err_t si7021_get_serial(i2c_dev_t *dev, uint64_t *serial, bool sht2x_mode)
     cmd = CMD_READ_ID_1;
     I2C_DEV_CHECK(dev, i2c_dev_read(dev, &cmd, 2, buf, 8));
     *serial = sht2x_mode
-        ? ((uint64_t)buf[0] << 40) | ((uint64_t)buf[2] << 32) | ((uint64_t)buf[4] << 24) | ((uint64_t)buf[6] << 16)
-        : ((uint64_t)buf[0] << 56) | ((uint64_t)buf[2] << 48) | ((uint64_t)buf[4] << 40) | ((uint64_t)buf[6] << 32);
+              ? ((uint64_t)buf[0] << 40) | ((uint64_t)buf[2] << 32) | ((uint64_t)buf[4] << 24) | ((uint64_t)buf[6] << 16)
+              : ((uint64_t)buf[0] << 56) | ((uint64_t)buf[2] << 48) | ((uint64_t)buf[4] << 40) | ((uint64_t)buf[6] << 32);
 
     // read SNB, ignore CRC
     cmd = CMD_READ_ID_2;
     I2C_DEV_CHECK(dev, i2c_dev_read(dev, &cmd, 2, buf, 6));
     *serial |= sht2x_mode
-        ? ((uint32_t)buf[0] << 8) | ((uint64_t)buf[3] << 56) | ((uint64_t)buf[4] << 48) | buf[1]
-        : ((uint32_t)buf[0] << 24) | ((uint32_t)buf[1] << 16) | ((uint32_t)buf[3] << 8) | buf[4];
+               ? ((uint32_t)buf[0] << 8) | ((uint64_t)buf[3] << 56) | ((uint64_t)buf[4] << 48) | buf[1]
+               : ((uint32_t)buf[0] << 24) | ((uint32_t)buf[1] << 16) | ((uint32_t)buf[3] << 8) | buf[4];
 
     I2C_DEV_GIVE_MUTEX(dev);
 

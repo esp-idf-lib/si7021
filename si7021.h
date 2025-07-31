@@ -55,7 +55,8 @@ extern "C" {
 /**
  * Device model for Si70xx
  */
-typedef enum {
+typedef enum
+{
     SI_MODEL_SI7013 = 0, //!< Si7013
     SI_MODEL_SI7020,     //!< Si7020
     SI_MODEL_SI7021,     //!< Si7021
@@ -66,7 +67,8 @@ typedef enum {
 /**
  * Measurement resolution
  */
-typedef enum {
+typedef enum
+{
     SI7021_RES_RH12_T14 = 0, //!< Relative humidity: 12 bits, temperature: 14 bits
     SI7021_RES_RH08_T12,     //!< Relative humidity: 8 bits, temperature: 12 bits
     SI7021_RES_RH10_T13,     //!< Relative humidity: 10 bits, temperature: 13 bits
