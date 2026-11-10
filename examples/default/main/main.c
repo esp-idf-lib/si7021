@@ -54,10 +54,6 @@ void task(void *pvParameters)
 
     while (1)
     {
-        /* float is used in printf(). you need non-default configuration in
-         * sdkconfig for ESP8266, which is enabled by default for this
-         * example. see sdkconfig.defaults.esp8266
-         */
         res = si7021_measure_temperature(&dev, &val);
         if (res != ESP_OK)
             printf("Could not measure temperature: %d (%s)\n", res, esp_err_to_name(res));
